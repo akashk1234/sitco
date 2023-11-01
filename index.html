@@ -37,7 +37,7 @@
 <body>
 
   <!-- ======= Top Bar ======= -->
-  <section id="topbar" class="d-flex align-items-center">
+  <section id="topbar" class="d-flex align-items-center" >
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
         <i class="bi bi-envelope-fill"></i><a href="mailto:sitcoassociates@gmail.com">sitcoassociates@gmail.com</a>
@@ -52,22 +52,28 @@
   </section>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
+  <header id="header" class="d-flex align-items-center" style="background: rgb(235,235,235);
+  background: linear-gradient(0deg, rgb(240, 240, 240) 0%, rgba(255,255,255,1) 79%); height: 100px;">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="index.html"><img src="./assets/img/sitco-logo.png" alt=""></a></h1>
+      <h1 class="logo"><a href="index.html"><img src="./assets/img/sitco-logo.png" alt="" width="300"></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="about.html">About us</a></li>
-          <li><a class="nav-link scrollto" href="services.html">Services</a></li>
-          <li><a class="nav-link scrollto" href="projects.html">Our projects</a></li>
-          <li><a class="nav-link scrollto" href="careers.html">Careers</a></li>
-          <li><a class="nav-link scrollto" href="clients.html">Our Clients</a></li>
-          <li><a class="nav-link scrollto" href="contact.html">Contact us</a></li>
+      <nav id="navbar" class="navbar ">
+        <ul >
+          <li ><a class="nav-link scrollto active text-dark" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto text-dark" href="about.html">About us</a></li>
+          <li><a class="nav-link scrollto text-dark" href="services.html">Services</a></li>
+          <li class="dropdown "><a href="#"><span class="text-dark">Our Projects</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
+              <li><a href="completed-projects.html">Completed Projects</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto text-dark" href="careers.html">Careers</a></li>
+          <li><a class="nav-link scrollto text-dark" href="clients.html">Our Clients</a></li>
+          <li><a class="nav-link scrollto text-dark" href="contact.html">Contact us</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -89,46 +95,39 @@
     #text {
         text-align: center;
         font-size: 80px;
-        margin-bottom: 300px;
+        margin-top: 200px;
     }
 }
 
+.video-box {
+            position: relative;
+            text-align: center;
+            height: 110vh;
+        }
+
+        .video-box video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* .video-box h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 90px;
+          } */
   </style>
   <!-- ======= Hero Section ======= -->
-  <section id="hero" >
-      <img src="assets/img/bg.jpg" class="hero-img" id="bg" alt="">
-
-      <img src="assets/img/moon.png" class="hero-img" id="moon" alt="">
-
-      <img src="assets/img/building.png" class="hero-img" id="building" alt="">
-
-      <img src="assets/img/road.png" class="hero-img" id="road" alt="">
-
-      <div data-aos="fade-down" class="p-5"><h2 id="text" style="font-weight: bolder;" class="text-1">Welcome to Sitco</h2></div>
-
-    </div>
-
-    
-  </section><!-- End Hero -->
-
-  <script type="text/javascript">
-    let bg = document.getElementById("bg");
-    let moon = document.getElementById("moon");
-    let building = document.getElementById("building");
-    let road = document.getElementById("road");
-    let text = document.getElementById("text");
-
-    window.addEventListener('scroll', function(){
-      var value = window.scrollY;
-
-      bg.style.top = value * 0.5 + 'px';
-      moon.style.left =  -value * 0.5 + 'px';
-      building.style.top = -value * 0.15 + 'px';
-      road.style.top = value * 0.15 + 'px';
-      text.style.top = value * 1 + 'px';
-    })
-
-  </script>
+ <section class="video-box">
+    <video id="video" src="assets/img/home-bg.mp4" autoplay muted loop></video>
+    <div data-aos="fade-down"><h1 id="text"><strong>Welcome to Sitco</strong></h1></div>
+ </section>
 
   <main id="main">
 
@@ -138,7 +137,7 @@
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
-            <img src="assets/img/about.png" class="img-fluid" id="abt" alt="">
+            <img src="assets/img/about-img.jpg" class="img-fluid" id="abt" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
             <h3>Welcome to Sitco Associates - Building the Future of Our Nation</h3>
@@ -422,13 +421,16 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
+  
+  <footer id="footer" style="background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 49%, rgb(240, 240, 240) 100%);">
     <div class="footer-top">
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-4 col-md-6">
-            <div class="footer-info">
+          <div class="col-lg-4 col-md-6" >
+            <div class="footer-info" style="background: rgb(28,37,102);
+            background: radial-gradient(circle, rgba(28,37,102,1) 0%, rgba(1,0,65,1) 100%);">
               <img src="assets/img/sitco-logo.png" alt="" width="300">
               <p class="mt-5">
                 <strong>Phone:</strong> 0484 - 4011300<br>
@@ -439,33 +441,33 @@
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services.html">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="projects.html">Our projects</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="careers.html">Careers</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="clients.html">Our Clients</a></li>
+            <h4 class="text-dark">Useful Links</h4>
+            <ul class="ul">
+              <li><i class="bx bx-chevron-right"></i> <a class="text-dark" href="index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a class="text-dark" href="about.html">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a class="text-dark" href="services.html">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a class="text-dark" href="projects.html">Our projects</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a class="text-dark" href="careers.html">Careers</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a class="text-dark" href="clients.html">Our Clients</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="services.html">Building Construction</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services.html">Road Construction</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services.html">Steel Building</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services.html">Infrastructure Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services.html">Land Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services.html">Technical Assistance</a></li>
+            <h4 class="text-dark">Our Services</h4>
+            <ul class="ul">
+              <li><i class="bx bx-chevron-right"></i> <a class="text-dark" href="services.html">Building Construction</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a class="text-dark" href="services.html">Road Construction</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a class="text-dark" href="services.html">Steel Building</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a class="text-dark" href="services.html">Infrastructure Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a class="text-dark" href="services.html">Land Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a class="text-dark" href="services.html">Technical Assistance</a></li>
 
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Get in touch to discuss your next project</h4>
-            <ul><li><i class="bx bx-chevron-right"></i> <a href="#">Contact us</a></li></ul><br><br>
+          <div class="col-lg-3 col-md-6 footer-links text-dark">
+            <h4 class="text-dark">Get in touch to discuss your next project</h4>
+            <ul><li><i class="bx bx-chevron-right"></i> <a class="text-dark" href="#">Contact us</a></li></ul><br><br>
 
             <div class="social-links mt-3 text-center">
               <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -481,11 +483,11 @@
     </div>
 
     <div class="container">
-      <div class="copyright">
+      <div class="copyright text-dark">
         &copy; Copyright <strong><span>Sitco Associates</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        <span style="color: #747474;">Designed by</span> <a href="https://ictglobaltech.com/" class="text-white ict"><strong>ICT Global Tech</strong></a>
+        <span style="color: #747474;">Designed by</span> <a class="text-dark" href="https://ictglobaltech.com/" class="text-white ict"><strong>ICT Global Tech</strong></a>
       </div>
     </div>
   </footer><!-- End Footer -->
